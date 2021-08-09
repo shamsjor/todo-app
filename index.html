@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="icon">TODO</div>
+        <div class="theme">
+          <div class="moon">
+          <img src="./images/icon-moon.svg" alt="moon" />
+          </div>
+          <div class="sun">
+          <img src="./images/icon-sun.svg" alt="sun" />
+          </div>
+        </div>
+        <div class="create">
+          <p class="circle"></p>
+          <input type="text" placeholder="Create a new todo..." />
+        </div>
+      </div>
+    </header>
+    <div class="list">
+      <div class="container">
+        <!-- <div class="clear todo-div">clear</div> -->
+        <div class="main desktop">
+          <div class="counter"><span>0</span> items left</div>
+          <div class="filter ">
+            <p class="blue all hover-dark">All</p>
+            <p class="active hover-dark">Active</p>
+            <p class="completed hover-dark">completed</p>
+          </div>
+          <div class="clear hover-dark">Clear Completed</div>
+        </div>
+        <div class="main mobile">
+          <div class="layer1">
+          <div class="counter"><span>0</span> items left</div>
+          <div class="clear hover-dark">Clear Completed</div>
+          </div>
+          <div class="layer2">
+            <div class="filter ">
+              <p class="blue all hover-dark">All</p>
+              <p class="active hover-dark">Active</p>
+              <p class="completed hover-dark">completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

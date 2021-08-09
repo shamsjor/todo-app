@@ -1,0 +1,220 @@
+:root {
+  --theme1-main-background: hsl(222, 26%, 31%);
+  --theme1-keypad-background: hsl(223, 31%, 20%);
+  --theme1-screen-background: hsl(224, 36%, 15%);
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
+  background-color: hsl(235, 21%, 11%);
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circle {
+  background: inherit;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: hsl(234, 39%, 85%) 1px solid;
+}
+.check {
+  position: absolute;
+  left: 12px;
+  top: 35px;
+}
+.blue {
+  color: #5676bf;
+}
+.todo-div {
+  display: flex;
+  justify-content: start;
+  padding: 30px;
+  color: hsl(236, 33%, 92%);
+  border-bottom: 1px solid hsl(236, 16%, 32%);
+  flex-basis: 100%;
+  position: relative;
+  cursor: pointer;
+  background-color: hsl(235, 24%, 19%);
+}
+@media (max-width: 375px) {
+  .todo-div {
+    width: 260px;
+    margin-left: -51px;
+  }
+}
+.todo-div p {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.todo-div .circle {
+  position: absolute;
+  left: 10px;
+  top: 32px;
+}
+.todo-div .circle:hover {
+  cursor: pointer;
+}
+.todo-div img {
+  position: absolute;
+  right: 15px;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+header {
+  background-image: url(../images/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
+  padding: 100px;
+  width: 100%;
+}
+@media (max-width: 375px) {
+  header {
+    background-image: url(../images/bg-mobile-dark.jpg);
+    width: 100%;
+  }
+  header .container {
+    width: 300px;
+    margin-left: -50px;
+  }
+}
+header .container {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+header .container .icon {
+  font-weight: bold;
+}
+header .container .create {
+  flex-basis: 100%;
+  position: relative;
+}
+header .container .create input {
+  align-self: center;
+  padding: 30px;
+  background-color: hsl(235, 24%, 19%);
+  border: none;
+  margin-top: 30px;
+  color: white;
+  width: 100%;
+}
+
+header .container .create .circle {
+  left: 10px;
+  top: 60px;
+}
+header .container .create input:focus {
+  border: none;
+  outline: none;
+}
+.moon {
+  display: none;
+}
+.list {
+  position: absolute;
+  top: 275px;
+}
+.list .container {
+  margin-left: 100px;
+}
+.list .container .main.desktop {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(235, 24%, 19%);
+  padding: 20px;
+  color: hsl(236, 16%, 32%);
+  flex-basis: 100%;
+}
+.hover-dark:hover {
+  color: hsl(236, 33%, 92%);
+}
+.hover-light:hover {
+  color: hsl(235, 19%, 35%);
+}
+.list .container .filter p:hover,
+.list .container .clear:hover {
+  cursor: pointer;
+}
+.list .container .filter {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 30%;
+}
+.main.mobile {
+  display: none !important;
+}
+
+@media (max-width: 375px) {
+  .main.desktop {
+    display: none !important;
+  }
+  .main.mobile {
+    display: flex !important;
+  }
+  .main.mobile .layer1 {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    left: 70px;
+    top: -33px;
+    background: inherit;
+    padding: 10px;
+    width: 260px;
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(236, 16%, 32%);
+  }
+  .main.mobile .layer2 {
+    width: 260px;
+    margin-left: -50px;
+    margin-top: 30px;
+    display: flex !important;
+    justify-content: space-evenly;
+    background-color: hsl(235, 24%, 19%);
+    padding: 15px;
+    color: hsl(236, 16%, 32%);
+  }
+  .main.mobile .layer2 .active {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+.list .container .counter {
+  align-self: flex-start;
+}
